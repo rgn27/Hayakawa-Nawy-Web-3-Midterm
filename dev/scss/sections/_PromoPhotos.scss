@@ -1,0 +1,34 @@
+/* =============
+    Promo Photos
+============= */
+
+.promophotos{
+    
+    @include sm{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        ". content .";   
+    }
+
+    @include md{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        ". content .";   
+        }
+    @include lg{
+        display: grid;
+        grid-template-columns: 50% 50%
+        ;
+        grid-template-areas: 
+        ". content .";   
+        }
+
+    @include xl{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        ". content .";   
+    }
+}

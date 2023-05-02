@@ -7,17 +7,6 @@ header{
     .content{
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-}
-
-footer{
-
-    .content{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-areas: none
-        ""
-        ;
+        
     }
 }

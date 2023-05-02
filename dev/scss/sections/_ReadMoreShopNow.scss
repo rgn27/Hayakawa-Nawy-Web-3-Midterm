@@ -1,0 +1,35 @@
+/* =============
+    Read More/Shop Now
+============= */
+
+.ReadMoreShopNow{
+    .container{
+        @include sm{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include md{
+            display: grid;
+            grid-template-columns: 16px 50% 50% 16px;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include lg{
+            display: grid;
+            grid-template-columns: 25px 50% 50% 25px;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include xl{
+            display: grid;
+            grid-template-columns: 280px 50% 50% 280px;
+            grid-template-areas: 
+            ". content .";
+        }
+    }
+
+        
+    
+}

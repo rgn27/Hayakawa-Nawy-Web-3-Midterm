@@ -11,6 +11,8 @@
 
   <body>
 
+<!--Header-->
+
    <header class="container"> 
       <div class="content">
         <img src="images/logo.svg" alt="logo">   <!--Fit on same line?-->
@@ -47,23 +49,24 @@
 
 <!--Hero Buttons-->
 
-  <section class="container2">
+  <section class="herobutton">
     
     
-      <div class="content">
+      <div class="container">
 
-        <h2> Join Now </h2>
-        <p>Join The Collective and start earning</p> 
+        <div> <h2> Join Now </h2>
+          <p>Join The Collective and start earning</p> </div>
+        
 
         <a href="#">Details <img src="images/arrowbutton.svg"
         alt="Hero"></a>
 
       </div>
 
-      <div class="content">
-
-        <h2> Sign In </h2>
-        <h3>Get points every time you shop.</h3> 
+      <div class="container">
+          <div> <h2> Sign In </h2>
+            <p>Get points every time you shop.</p> </div>
+        
         
         <a href="#">Details <img src="images/arrowbutton.svg"
           alt="Hero"></a>
@@ -75,11 +78,11 @@
 
 <!--Read More/Shop Now-->
 
-<section class="container">
-    
-  <div class="content">
-    <div>
 
+    
+  <div class="ReadMoreShopNow">
+
+    <div class="container">
       <h2> Who We Are </h2>
 
       <a href="#">
@@ -87,44 +90,49 @@
       </a>
 
     </div>
+    <div class="container">
+      <div>
 
-    <div>
-
-      <h2> Our #1 Best-Selling Leggings </h2> 
+        <h2> Our #1 Best-Selling Leggings </h2> 
+        
+        <a href="#">
+          SHOP NOW
+        </a>
+      </div>
+        <img class="large-image" src="images/BestSellingLeggings.webp" alt="Best Selling Leggings">
       
-      <a href="#">
-        SHOP NOW
-      </a>
-    </div>
 
-    <div>
-      <img class="large-image" src="images/BestSellingLeggings.webp" alt="Best Selling Leggings">
     </div>
+    
     
   </div>
   
-</section>
 
-<!--Promo Photos-->
 
-<section class="container">
-   
-  <div class="content"> 
-    <ul>
+<!--Promo Photos
+<ul>
       <li><img class="large-image" src="images/Promo1.png" alt="Bathing Suit"></li>
 
       <li><img class="large-image" src="images/Promo2.png" alt="SweatShirt"></li>
     
-    </ul>
+    </ul>-->
+
+<section class="promophotos">
+  <div>
+    <img class="large-image" src="images/Promo1.png" alt="Bathing Suit">
   </div>
+  <div>
+    <img class="large-image" src="images/Promo2.png" alt="SweatShirt">
+  </div>
+  
   
   
 </section>
 
 <!--What's New-->
 
-<section class=container>
-  <div class="content">
+<section class=whatsnew>
+  <div class="container">
     <div>
       <h2> What's New</h2>
     </div>
@@ -183,103 +191,113 @@
 </section>
 
 
+
 <!--Footer-->
 
-<footer>
-<div>
-  <div>
-    <h2>Locations</h2> 
-  </div>
-  
-    <div class="container">
-      <div class="content"> 
-        <h3>Rhode Island</h3>
-      </div>
-  
-      <div class="content">
-        <p>188 Chery Hill Street <br> Providence, RI 19104 </p>
-        <img src="images/arrow.svg" alt="MapIcon">
-      </div>
-  
-      <div class="content">
-        <p>(587)555-1818 </p>
-        <img src="images/phone.svg" alt="PhoneIcon">
-      </div>
-  
-    </div>
-  
+<footer class="footer">
+  <section class="container">
     <div>
-      <div> 
-        <h3>New York</h3>
-      </div>
-  
       <div>
-        <p>1600 7th Avenue <br> New York City, NY 08091 </p>
-        <img src="images/arrow.svg" alt="MapIcon">
-      </div>
-  
-      <div>
-        <p>(152)557-7878 </p>
-        <img src="images/phone.svg" alt="PhoneIcon">
+        <h2>Locations</h2> 
       </div>
       
-    </div>
-  
-    <div>
-      <div> 
-        <h3>California</h3>
-      </div>
-  
-      <div>
-        <p>5050 Main Street <br> Los Angeles, CA 13512 </p>
-        <img src="images/arrow.svg" alt="MapIcon">
-      </div>
-  
-      <div>
-        <p>(302) 543-1919 </p>
-        <img src="images/phone.svg" alt="PhoneIcon">
-      </div>
-      
-    </div>
-</div>
-
-<div class="container">
-  <div class="content">
-    <div>
-      <h2>Newsletter Sign Up</h2>
-    </div>
-  
-    <div>
-      <form action="#">
-        <input type="text" placeholder="Email address">
-        <button> SIGN UP </button>
-      </form>
-    </div>
-
-  </div>
-  
-
-</div>
-
-  <div class="container">
-    
-    <div class="content">
-      <h2>Follow us.</h2>
-      <ul>
-        <a href="#"> Instagram <img src="images/instagram.svg" 
-          alt="Instagram"> </a> 
-        <a href="#"> Facebook <img src="images/facebooksvg.svg"
-          alt="Facebook"> </a> 
-        <a href="#"> Twitter <img src="images/twitter.svg"
-          alt="Twitter"> </a> 
-        <a href="#"> Twitter <img src="images/youtube.svg"
-          alt="Youtube"> </a> 
+        <div class="container">
+          <div>
+            <div> 
+              <h3>Rhode Island</h3>
+            </div>
         
-      </ul>
+            <div>
+              <p>188 Cherry Hill Street <br> Providence, RI 19104 </p>
+              <img src="images/arrow.svg" alt="MapIcon">
+            </div>
+        
+            <div>
+              <p>(587)555-1818 </p>
+              <img src="images/phone.svg" alt="PhoneIcon">
+            </div>
+        
+          </div>
+          
+        </div>
       
+        <div class="container">
+          <div>
+            <div> 
+              <h3>New York</h3>
+            </div>
+        
+            <div>
+              <p>1600 7th Avenue <br> New York City, NY 08091 </p>
+              <img src="images/arrow.svg" alt="MapIcon">
+            </div>
+        
+            <div>
+              <p>(152)557-7878 </p>
+              <img src="images/phone.svg" alt="PhoneIcon">
+            </div>
+            
+          </div>
+          
+        </div>
+      
+        <div>
+          <div> 
+            <h3>California</h3>
+          </div>
+      
+          <div>
+            <p>5050 Main Street <br> Los Angeles, CA 13512 </p>
+            <img src="images/arrow.svg" alt="MapIcon">
+          </div>
+      
+          <div>
+            <p>(302) 543-1919 </p>
+            <img src="images/phone.svg" alt="PhoneIcon">
+          </div>
+          
+        </div>
     </div>
-  </div>
+    
+    <div class="request container">
+      <div class="content">
+        <div>
+          <h2>Newsletter Sign Up</h2>
+        </div>
+      
+        <div>
+          <form action="#">
+            <input type="text" placeholder="Email address">
+            <button> SIGN UP </button>
+          </form>
+        </div>
+    
+      </div>
+      
+    
+    </div>
+    
+      <div class="container">
+        
+        <div class="content">
+          <h2>Follow us.</h2>
+          <ul>
+            <a href="#"> Instagram <img src="images/instagram.svg" 
+              alt="Instagram"> </a> 
+            <a href="#"> Facebook <img src="images/facebooksvg.svg"
+              alt="Facebook"> </a> 
+            <a href="#"> Twitter <img src="images/twitter.svg"
+              alt="Twitter"> </a> 
+            <a href="#"> Twitter <img src="images/youtube.svg"
+              alt="Youtube"> </a> 
+            
+          </ul>
+          
+        </div>
+      </div>
 
+  </section>
+    
 </footer>
 
 
@@ -287,3 +305,4 @@
   </body>
   <script src="js/scripts-min.js"></script>
 </html>
+

@@ -1,0 +1,22 @@
+/* =============
+    What's New
+============= */
+
+.whatsnew{
+    ul{
+        
+        @include md{
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 1fr 16px;
+        }
+        @include lg {
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 1fr 16px;
+        }
+        @include xl{
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 1fr 16px;
+        }
+
+    }
+    }

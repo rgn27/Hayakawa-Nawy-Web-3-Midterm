@@ -1,3 +1,26 @@
 /* =============
     Footer
+    @include sm{
+            grid-template-columns: 1fr 1fr 1fr;
 ============= */
+
+
+footer{
+    .content{
+        display: grid;
+        grid-template-columns: 16px auto 16 px;
+        grid-template-areas: none
+        "";
+        }
+
+        @include md{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @include xl{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        
+    }
+
+
+    

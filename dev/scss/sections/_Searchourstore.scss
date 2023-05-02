@@ -1,0 +1,33 @@
+/* =============
+    Search our Store
+============= */
+.searchourstore{
+
+    .content{
+
+        @include sm{
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 16px;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include md{
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 16px;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include lg{
+            display: grid;
+            grid-template-columns: 16px 1fr 1fr 16px;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include xl{ 
+            grid-template-columns: auto 1fr auto;
+            grid-area: 
+            "p1 p1";
+
+        }
+    }
+}
