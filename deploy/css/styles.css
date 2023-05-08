@@ -448,6 +448,28 @@ footer .content {
 /* =============
     Hero
 ============= */
+@media (min-width: 768px) {
+  .hero .hero-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content {
+    grid-template-columns: 50% 50%;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content-left.container {
+    grid-template-columns: auto auto 16px;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero-content-right.container {
+    grid-template-columns: auto auto 16px; /*need to be fixed */
+  }
+}
+
 /* =============
     Read More/Shop Now
 ============= */
@@ -537,31 +559,76 @@ footer .content {
 /* =============
     Hero Buttons
 ============= */
-@media (min-width: 576px) {
-  .herobutton .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: ". content .";
-  }
+.herobutton {
+  /* =============@include sm{
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-areas: 
+              ". content .";
+          }
+          @include md{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas: 
+              ". content .";
+          }
+          @include lg{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas: 
+              ". content .";
+          }
+          @include xl{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas: 
+              ". content .";
+          }
+      }============= */
 }
 @media (min-width: 768px) {
-  .herobutton .container {
+  .herobutton {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: ". content .";
+    grid-template-columns: 15px 1fr 1fr 15px;
+    grid-template-areas: ". box-1 box-2 .";
   }
 }
-@media (min-width: 992px) {
-  .herobutton .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: ". content .";
+@media (min-width: 1200px) {
+  .herobutton {
+    grid-template-columns: auto 570px 570px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .herobutton {
+    grid-template-columns: auto 660px 660px auto;
   }
 }
 @media (min-width: 1200px) {
   .herobutton .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: ". content .";
+    grid-template-columns: 16px auto 16px;
   }
+}
+@media (min-width: 768px) {
+  .herobutton .container.box-1 {
+    grid-area: box-1;
+  }
+}
+@media (min-width: 768px) {
+  .herobutton .container.box-2 {
+    grid-area: box-2;
+  }
+}
+.herobutton .container .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 img" "a img";
+}
+.herobutton .container .content h2 {
+  grid-area: h2;
+}
+.herobutton .container .content a {
+  grid-area: a;
+}
+.herobutton .container .content img {
+  grid-area: img;
 }

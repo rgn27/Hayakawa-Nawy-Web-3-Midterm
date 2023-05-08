@@ -1,0 +1,60 @@
+/* =============
+    Base
+============= */
+.large-image {
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". content .";
+}
+
+.content {
+  grid-area: content;
+}
+
+.divider .container .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 img" "a img";
+}
+.divider .container a {
+  grid-area: a;
+}
+.divider .container img {
+  grid-area: img;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". content .";
+}
+
+body {
+  background-color: rgb(240, 227, 227);
+}
+
+/* =============
+@include sm{
+
+}
+
+@include md{
+
+}
+
+@include lg{
+
+}
+============= */
+/* =============
+@include xl{
+    grid-template-columns: auto 1140px auto;
+}
+@include xxl{
+    grid-template-columns: auto 1320px auto;
+}
+============= */
