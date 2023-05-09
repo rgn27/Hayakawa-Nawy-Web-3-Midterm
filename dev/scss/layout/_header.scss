@@ -3,10 +3,30 @@
 ============= */
 
 header{
-
+    
+    padding-top: 25px ;
+    padding-bottom: 12px;
     .content{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        padding: 16px 0px;
+        
+    }
+    .logo{
+        text-align:left;
+    }
+
+    nav{
+        display:none;
+        text-align: right;
+        @include md{
+            display:block;
+        }
+        a{
+            padding: 10px 20px;
+            display: block;
+        }
     }
 }

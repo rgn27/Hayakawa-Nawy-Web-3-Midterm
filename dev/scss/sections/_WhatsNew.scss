@@ -3,20 +3,81 @@
 ============= */
 
 .whatsnew{
-    ul{
-        
+    .whatsnew-articles{
         @include md{
             display: grid;
-            grid-template-columns: 16px 1fr 1fr 1fr 16px;
-        }
-        @include lg {
-            display: grid;
-            grid-template-columns: 16px 1fr 1fr 1fr 16px;
-        }
-        @include xl{
-            display: grid;
-            grid-template-columns: 16px 1fr 1fr 1fr 16px;
-        }
+            grid-template-columns: 16px auto 16px;
+            grid-template-columns: ". articles .";
+            }
 
+        @include xl{
+            grid-template-columns: auto 1140px auto;
+            }
+
+        @include xxl{
+            grid-template-columns: auto 1320px auto;
+            }
+
+            ul.article-grid{
+                li  {list-style: none;
+                }  
+                column-gap: 16px;
+                row-gap: 16px;
+                @include md{
+                    grid-area: articles;
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-area: articles;
+                    grid-template-areas:
+                    "a1 a1 a2 a2"
+                    "a3 a3 a4 a4"
+                    ". a5 a5 .";
+                }
+
+                @include lg{
+                    grid-template-columns: repreat(6,1fr);
+                    grid-template-areas: 
+                    "a1 a1 a2 a2 a3 a3"
+                    ". a4 a4 a5 a5 ."; 
+                    
+                }
+
+                li{
+                    .container{
+                        @include xl{
+                            grid-template-columns: 15px auto;
+                        }
+                    }
+                    &.article-1{
+                        @include md{
+                            grid-area: a1;
+                        }
+                    }
+
+                    &.article-2{
+                        @include md{
+                            grid-area: a2;
+                        }
+                    }
+
+                    &.article-3{
+                        @include md{
+                            grid-area: a3;
+                        }
+                    }
+
+                    &.article-4{
+                        @include md{
+                            grid-area: a4;
+                        }
+                    }
+
+                    &.article-5{
+                        @include md{
+                            grid-area: a5;
+                        }
+                    }
+                }
+        }  
     }
-    }
+}

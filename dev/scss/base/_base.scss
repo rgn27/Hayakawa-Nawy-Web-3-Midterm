@@ -5,7 +5,7 @@
 .large-image{
     width:100%;
 }
-
+ 
 
 .container{
     display: grid;
@@ -13,58 +13,24 @@
     grid-template-areas: 
         ". content ."
     ;
-}
 
-.content{
-    grid-area: content;
-}
-
-.divider {
-    .container{
-        .content{
-            display:grid;
-            grid-template-columns: 50% 50%;
-            grid-template-areas:
-            "h2 img"
-            "a img";
-        }
-        a{
-            grid-area:a;
-        }
-        img{
-            grid-area: img;
-        }
+    @include xl{
+    grid-template-columns: auto 1140px auto;
     }
-}
-.container2{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: 
-        ". content ."
-    ;
+
+    @include xxl{
+    grid-template-columns: auto 1320px auto;
+    }
+    .content{
+        grid-area: content;
+    }
 }
 
 
 body {
-    background-color: rgb(255, 0, 0);
-}
-
-@include sm{
-
-}
-
-@include md{
-
-}
-
-@include lg{
-
-}
-
-@include xl{
-
-}
-
-@include xxl{
-
+    @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+      }
+    background-color: rgb(252, 251, 246);
 }

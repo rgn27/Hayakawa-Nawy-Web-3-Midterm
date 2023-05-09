@@ -15,8 +15,13 @@
 
    <header class="container"> 
       <div class="content">
-        <img src="images/logo.svg" alt="logo">   <!--Fit on same line?-->
-        <h3>Free shipping on order $100+</h3>
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo">
+        </div>
+        
+          <nav>
+            <h3>Free shipping on order $100+</h3>
+          </nav>
       </div>
       
    </header>
@@ -25,14 +30,12 @@
 
   <section class="container">
     <div class="content">
-
-      <nav><h2> Search our store</h2>
-        <form action="#">
-          <input type="text" placeholder="Search our store">
-        </form>
-        <button><img src="images/search.svg" 
-          alt="searchicon"></button>
-      </nav>
+      <h2 style="font-size: x-large"> Search our store</h2>
+      <div class="content">
+        <p><form action="#"><input type="text" placeholder="Search our store"></form>
+        <button><img src="images/search.svg" alt="searchicon"></button></p>
+      </div>
+      <hr/>
       
     </div>
   
@@ -40,36 +43,40 @@
 
 <!--Hero-->
 
-  <section class="container">
-      <div class="content">
+  <section class="hero">
         <img class="large-image" src="images/Hero.png" alt="Hero">
-      </div>
-      
-  </section>
 
-<!--Hero Buttons-->
+  <!--Hero Buttons-->
 
-  <section class="herobutton">
     
-    
-      <div class="container">
+      <div class="hero-content">
 
-        <div> <h2> Join Now </h2>
-          <p>Join The Collective and start earning</p> </div>
-        
+          <div class="hero-content-left container"> 
+            <div class="content">
+              <div>
+                <h2> Join Now </h2>
+                <p>Join The Collective and start earning</p> 
+              </div>
+              <div>
+                <a href="#">Details <img src="images/arrowbutton.svg"
+                  alt="Hero"></a>
+              </div>
+              
+            </div> 
+          </div>
 
-        <a href="#">Details <img src="images/arrowbutton.svg"
-        alt="Hero"></a>
-
-      </div>
-
-      <div class="container">
-          <div> <h2> Sign In </h2>
-            <p>Get points every time you shop.</p> </div>
-        
-        
-        <a href="#">Details <img src="images/arrowbutton.svg"
-          alt="Hero"></a>
+          <div class="hero-content-right container">
+            <div class="content"> 
+                <div>
+                  <h2> Sign In </h2>
+                  <p>Get points every time you shop.</p>
+                </div>
+            <div>
+                <a href="#">Details <img src="images/arrowbutton.svg"
+                    alt="Hero"></a>
+            </div>
+            </div> 
+          </div>
 
       </div>
     
@@ -82,26 +89,25 @@
     
   <div class="ReadMoreShopNow">
 
-    <div class="container">
-      <h2> Who We Are </h2>
-
-      <a href="#">
+    <div class="box-1 container">
+      <div class="content">    
+        <h2> Who We Are </h2>
+        <a href="#">
         READ MORE
-      </a>
+        </a>
 
+      </div>
     </div>
-    <div class="container">
-      <div>
 
+    <div class="box-2 container">
+      <div class="content">
         <h2> Our #1 Best-Selling Leggings </h2> 
-        
         <a href="#">
           SHOP NOW
         </a>
-      </div>
         <img class="large-image" src="images/BestSellingLeggings.webp" alt="Best Selling Leggings">
-      
-
+      </div>
+        
     </div>
     
     
@@ -109,194 +115,165 @@
   
 
 
-<!--Promo Photos
-<ul>
-      <li><img class="large-image" src="images/Promo1.png" alt="Bathing Suit"></li>
+<!--Promo Photos-->
 
-      <li><img class="large-image" src="images/Promo2.png" alt="SweatShirt"></li>
+  <section class="promophotos">
+    <ul>
+      <li class="img-1">
+        <img class="large-image" src="images/Promo1.png" alt="Bathing Suit">
+      </li>
+      <li class="img-2">
+        <img class="large-image" src="images/Promo2.png" alt="SweatShirt">
+      </li>
     
-    </ul>-->
+    </ul>
 
-<section class="promophotos">
-  <div>
-    <img class="large-image" src="images/Promo1.png" alt="Bathing Suit">
-  </div>
-  <div>
-    <img class="large-image" src="images/Promo2.png" alt="SweatShirt">
-  </div>
-  
-  
-  
-</section>
+  </section>
 
 <!--What's New-->
 
-<section class=whatsnew>
-  <div class="container">
-    <div>
-      <h2> What's New</h2>
+  <section class=whatsnew>
+    <!--<div class="whatsnew-title">-->
+    <div class="whatsnew-title">
+      <div class="container">
+        <div class="content">
+          <h2> What's New</h2>
+        </div>
+      </div>
     </div>
-
-  <div>
-
-    <ul>
-      <li>
-    
-          <img class="large-image" src="images/Shorts&Skirts.png" alt="Shorts&Skorts">
-          <h2> Shorts & Skorts </h2>
-          <p> Recycled bottoms for your running, biking, and looking cute needs. </p>
-          <a href="#"> Read More </a>
-         
-      </li>
-
-      <li>
-       
+    <div class="whatsnew-articles">
+      <ul class="article-grid">
+        <li class="article-1">
+      
+            <img class="large-image" src="images/Shorts&Skirts.png" alt="Shorts&Skorts">
+            <div class="container">
+              <div class="content">
+                <h2> Shorts & Skorts </h2>
+                <p> Recycled bottoms for your running, biking, and looking cute needs. </p>
+                <a href="#"> Read More </a>
+              </div>
+            </div> 
+        </li>
+   
+        <li class="article-2">
+        
           <img class="large-image" src="images/NewArrivals.png" alt="New Arrivals">
-        <h2> New Arrivals </h2>
-        <p> See what's new in store. All recycled, all ethically made. </p>
-        <a href="#">Read More </a>
-       
-      </li>
+          <div class="container">
+            <div class="content">
+              <h2> New Arrivals </h2>
+              <p> See what's new in store. All recycled, all ethically made. </p>
+              <a href="#">Read More </a>
+            </div>
+          </div> 
+        
+        </li>
+        
+        <li class="article-3">
+    
+            <img class="large-image" src="images/Tees&Tanks.png" alt="Tees & Tanks">
+            <div class="container">
+              <div class="content">
+                <h2> Tees & Tanks </h2>
+                <p> It's getting warmer. Dress accordingly. </p>
+                <a href="#">Read More</a>
+              </div>
+            </div> 
+        </li>
       
-      <li>
-   
-          <img class="large-image" src="images/Tees&Tanks.png" alt="Tees & Tanks">
-          <h2> Tees & Tanks </h2>
-          <p> It's getting warmer. Dress accordingly. </p>
-          <a href="#">Read More</a>
-   
-      </li>
-     
-      <li>
+        <li class="article-4">
+        
+            <img class="large-image" src="images/Leggings.png" alt="Leggings">
+            <div class="container">
+              <div class="content">
+                <h2> Leggings </h2>
+                <p> Soft, sturdy, sustainable. Like all leggings should be. </p>
+                <a href="#">Read More</a>
+              </div>
+            </div>
+
+        </li>
       
-          <img class="large-image" src="images/Leggings.png" alt="Leggings">
-          <h2> Leggings </h2>
-          <p> Soft, sturdy, sustainable. Like all leggings should be. </p>
-          <a href="#">Read More</a>
+        <li class="article-5">
+            <img class="large-image" src="images/Dress&Jumpsuits.png" alt="Dresses & Jumpsuits">
+            <div class="container">
+              <div class="content">
+                <h2> Dresses & Jumpsuits </h2>
+                <p>Exercise dresses and unitards - the ultimate easy outfit. </p>
+                <a href="#">Read More</a> 
 
-      </li>
-     
-      <li>
-          <img class="large-image" src="images/Dress&Jumpsuits.png" alt="Dresses & Jumpsuits">
-          <h2> Dresses & Jumpsuits </h2>
-          <p>Exercise dresses and unitards - the ultimate easy outfit. </p>
-          <a href="#">Read More</a> 
-      </li>
-     
-    </ul>
-   </div>
-
-  </div>
-
-</section>
+              </div>
+            </div>
+        </li>
+      
+      </ul>
+    </div>
+    
+  </section>
 
 
 
 <!--Footer-->
 
-<footer class="footer">
-  <section class="container">
-    <div>
-      <div>
+<footer class="container">
+  <div class="content">
+    <div class="locations">
         <h2>Locations</h2> 
-      </div>
       
-        <div class="container">
-          <div>
-            <div> 
+        <ul>
+            <li>
               <h3>Rhode Island</h3>
-            </div>
-        
-            <div>
-              <p>188 Cherry Hill Street <br> Providence, RI 19104 </p>
-              <img src="images/arrow.svg" alt="MapIcon">
-            </div>
-        
-            <div>
-              <p>(587)555-1818 </p>
-              <img src="images/phone.svg" alt="PhoneIcon">
-            </div>
-        
-          </div>
-          
-        </div>
-      
-        <div class="container">
-          <div>
-            <div> 
+              <p><img src="images/arrow.svg" alt="MapIcon"> <span>188 Cherry Hill Street <br/> Providence, RI 19104 </span> </p>
+              <p><img src="images/phone.svg" alt="PhoneIcon"> <a href='#'>(587)555-1818</a> </p>
+              <hr/>
+            </li>
+            <li>
               <h3>New York</h3>
-            </div>
-        
-            <div>
-              <p>1600 7th Avenue <br> New York City, NY 08091 </p>
-              <img src="images/arrow.svg" alt="MapIcon">
-            </div>
-        
-            <div>
-              <p>(152)557-7878 </p>
-              <img src="images/phone.svg" alt="PhoneIcon">
-            </div>
-            
-          </div>
-          
-        </div>
-      
-        <div>
-          <div> 
-            <h3>California</h3>
-          </div>
-      
-          <div>
-            <p>5050 Main Street <br> Los Angeles, CA 13512 </p>
-            <img src="images/arrow.svg" alt="MapIcon">
-          </div>
-      
-          <div>
-            <p>(302) 543-1919 </p>
-            <img src="images/phone.svg" alt="PhoneIcon">
-          </div>
-          
-        </div>
+              <p><img src="images/arrow.svg" alt="MapIcon"> <span>1600 7th Avenue <br/> New York City, NY 08091 </span></p>
+              <p><img src="images/phone.svg" alt="PhoneIcon"> <a href='#'>(152)557-7878</a> </p>
+              <hr/>
+            </li>
+            <li>
+              <h3>California</h3>
+              <p><img src="images/arrow.svg" alt="MapIcon"> <span>5050 Main Street <br/> Los Angeles, CA 13512 </span></p>
+              <p><img src="images/phone.svg" alt="PhoneIcon"> <a href='#'>(302) 543-1919</a> </p>
+              <hr/>
+            </li>
+          </ul>
     </div>
-    
-    <div class="request container">
-      <div class="content">
-        <div>
-          <h2>Newsletter Sign Up</h2>
-        </div>
-      
-        <div>
-          <form action="#">
+
+    <div class="newsletter">
+        <h2>Newsletter Sign Up</h2>
+        <form action="#">
             <input type="text" placeholder="Email address">
             <button> SIGN UP </button>
-          </form>
-        </div>
-    
-      </div>
-      
-    
+        </form>
     </div>
     
-      <div class="container">
-        
-        <div class="content">
-          <h2>Follow us.</h2>
+    <div class="social">
+        <h2>Follow us.</h2>
           <ul>
-            <a href="#"> Instagram <img src="images/instagram.svg" 
-              alt="Instagram"> </a> 
-            <a href="#"> Facebook <img src="images/facebooksvg.svg"
-              alt="Facebook"> </a> 
-            <a href="#"> Twitter <img src="images/twitter.svg"
-              alt="Twitter"> </a> 
-            <a href="#"> Twitter <img src="images/youtube.svg"
-              alt="Youtube"> </a> 
+            
+            
+            <li>
+              <a href="#"> Instagram <img src="images/instagram.svg" 
+                alt="Instagram"> </a> 
+            </li>
+            <li>
+              <a href="#"> Facebook <img src="images/facebooksvg.svg"
+                alt="Facebook"> </a> 
+            </li>
+            <li>
+              <a href="#"> Twitter <img src="images/twitter.svg"
+                alt="Twitter"> </a> 
+            </li>
+            <li>
+              <a href="#"> Twitter <img src="images/youtube.svg"
+                alt="Youtube"> </a> 
+            </li>
             
           </ul>
-          
-        </div>
       </div>
-
-  </section>
+    </div>
     
 </footer>
 

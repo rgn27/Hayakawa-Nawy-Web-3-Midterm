@@ -1,23 +1,43 @@
 /* =============
     Footer
-    @include sm{
-            grid-template-columns: 1fr 1fr 1fr;
+   
 ============= */
 
 
 footer{
     .content{
-        display: grid;
-        grid-template-columns: 16px auto 16 px;
-        grid-template-areas: none
-        "";
-        }
-
+        li  {list-style: none;
+        }  
         @include md{
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas:
+            "locations newsletter"
+            "locations social";
         }
-        @include xl{
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        
+        }
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "locations newsletter social" ;
+
+        }
+        .locations{
+            @include md{
+                grid-area:locations;
+            }
+        }
+        .newsletter{
+            background-color: rgb(218, 237, 153);
+            @include md{
+                grid-area: newsletter;
+            }
+        }
+        .social{
+            @include md{
+                grid-area: social;
+            }
         }
         
     }

@@ -331,31 +331,26 @@ template {
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". content .";
 }
-
-.content {
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: auto 1140px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    grid-template-columns: auto 1320px auto;
+  }
+}
+.container .content {
   grid-area: content;
 }
 
-.divider .container .content {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "h2 img" "a img";
-}
-.divider .container a {
-  grid-area: a;
-}
-.divider .container img {
-  grid-area: img;
-}
-
-.container2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: ". content .";
-}
-
 body {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(252, 251, 246);
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
 }
 
 /* =============
@@ -388,35 +383,78 @@ textarea {
 /* =============
     Header
 ============= */
+header {
+  padding-top: 25px;
+  padding-bottom: 12px;
+}
 header .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 16px 0px;
+}
+header .logo {
+  text-align: left;
+}
+header nav {
+  display: none;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  header nav {
+    display: block;
+  }
+}
+header nav a {
+  padding: 10px 20px;
+  display: block;
 }
 
 /* =============
     Footer
-    @include sm{
-            grid-template-columns: 1fr 1fr 1fr;
+
 ============= */
-footer .content {
-  display: grid;
-  grid-template-columns: 16px auto 16 px;
-  grid-template-areas: none "";
+footer .content li {
+  list-style: none;
 }
 @media (min-width: 768px) {
-  footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  footer .content {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "locations newsletter" "locations social";
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "locations newsletter social";
+  }
+}
+@media (min-width: 768px) {
+  footer .locations {
+    grid-area: locations;
+  }
+}
+footer .newsletter {
+  background-color: rgb(218, 237, 153);
+}
+@media (min-width: 768px) {
+  footer .newsletter {
+    grid-area: newsletter;
+  }
+}
+@media (min-width: 768px) {
+  footer .social {
+    grid-area: social;
   }
 }
 
 /* =============
     Search our Store
 ============= */
+.searchourstore {
+  font-style: #3E3E3E;
+  font-size: 27px;
+}
 @media (min-width: 576px) {
   .searchourstore .content {
     display: grid;
@@ -424,22 +462,9 @@ footer .content {
     grid-template-areas: ". content .";
   }
 }
-@media (min-width: 768px) {
-  .searchourstore .content {
-    display: grid;
-    grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-areas: ". content .";
-  }
-}
-@media (min-width: 992px) {
-  .searchourstore .content {
-    display: grid;
-    grid-template-columns: 16px 1fr 1fr 16px;
-    grid-template-areas: ". content .";
-  }
-}
 @media (min-width: 1200px) {
   .searchourstore .content {
+    text-align: center;
     grid-template-columns: auto 1fr auto;
     grid-area: "p1 p1";
   }
@@ -459,78 +484,208 @@ footer .content {
     grid-template-columns: 50% 50%;
   }
 }
+.hero .hero-content-left.container {
+  padding: 12px;
+  background-color: rgb(239, 252, 196);
+}
 @media (min-width: 992px) {
   .hero .hero-content-left.container {
-    grid-template-columns: auto auto 16px;
+    grid-template-columns: 16px auto auto;
   }
+}
+.hero .hero-content-right.container {
+  padding: 12px;
+  background-color: rgb(218, 237, 153);
 }
 @media (min-width: 992px) {
   .hero .hero-content-right.container {
-    grid-template-columns: auto auto 16px; /*need to be fixed */
+    grid-template-columns: 240px auto 16px;
   }
 }
 
 /* =============
+        @include md{
+            display:grid;
+            grid-template-columns: 15px 1fr 1fr 15px;
+            grid-template-areas:
+            ". box-1 box-2 ."
+            ;
+        }
+
+        @include xl{
+            grid-template-columns: auto 570px 570px auto;
+        }
+
+        @include xxl{
+            grid-template-columns: auto 660px 660px auto;
+        }
+        .container{
+            @include xl{
+                grid-template-columns: 16px auto 16px;
+            }
+
+            &.box-1{
+                @include md{
+                    grid-area: box-1;
+                }
+            }
+
+            &.box-2{
+                @include md{
+                    grid-area: box-2;
+                }
+            }
+            .content{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas:
+                "h2 img"
+                "a img"
+                ;
+                h2{
+                    grid-area: h2;
+                }
+
+                a{
+                    grid-area: a;
+                }
+
+                img{
+                    grid-area: img;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    /* =============
+    Hero Buttons.herobutton{
+============= */
+/* =============@include sm{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include md{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include lg{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            ". content .";
+        }
+        @include xl{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            ". content .";
+        }
+    }============= */
+/* =============
     Read More/Shop Now
 ============= */
-@media (min-width: 576px) {
-  .ReadMoreShopNow .container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: ". content .";
-  }
-}
 @media (min-width: 768px) {
-  .ReadMoreShopNow .container {
+  .ReadMoreShopNow {
     display: grid;
-    grid-template-columns: 16px 50% 50% 16px;
-    grid-template-areas: ". content .";
+    grid-template-columns: 16px 1fr 1fr 16px;
+    grid-template-areas: ". box-1 box-2 .";
   }
 }
-@media (min-width: 992px) {
-  .ReadMoreShopNow .container {
-    display: grid;
-    grid-template-columns: 25px 50% 50% 25px;
-    grid-template-areas: ". content .";
+@media (min-width: 1200px) {
+  .ReadMoreShopNow {
+    grid-template-columns: auto 570px 570px auto;
+  }
+}
+@media (min-width: 1400px) {
+  .ReadMoreShopNow {
+    grid-template-columns: auto 660px 660px auto;
   }
 }
 @media (min-width: 1200px) {
   .ReadMoreShopNow .container {
-    display: grid;
-    grid-template-columns: 280px 50% 50% 280px;
-    grid-template-areas: ". content .";
+    grid-template-columns: 16px auto 16px;
   }
+}
+.ReadMoreShopNow .container.box-1 {
+  text-align: center;
+  background-color: rgb(218, 237, 153);
+}
+@media (min-width: 768px) {
+  .ReadMoreShopNow .container.box-1 {
+    grid-area: box-1;
+  }
+}
+@media (min-width: 768px) {
+  .ReadMoreShopNow .container.box-2 {
+    grid-area: box-2;
+  }
+}
+.ReadMoreShopNow .container .content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "h2 img" "a img";
+}
+.ReadMoreShopNow .container .content h2 {
+  grid-area: h2;
+}
+.ReadMoreShopNow .container .content a {
+  width: 162px;
+  height: 42px;
+  text-align: center;
+  padding: 12px;
+  background-color: rgb(255, 254, 251);
+  grid-area: a;
+}
+.ReadMoreShopNow .container .content img {
+  grid-area: img;
 }
 
 /* =============
     Promo Photos
 ============= */
-@media (min-width: 576px) {
-  .promophotos {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: ". content .";
-  }
+.promophotos ul li {
+  list-style: none;
 }
 @media (min-width: 768px) {
-  .promophotos {
+  .promophotos ul {
+    padding: 20px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: ". content .";
+    grid-template-columns: 50% auto;
+    grid-auto-rows: 420px;
   }
 }
 @media (min-width: 992px) {
-  .promophotos {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: ". content .";
+  .promophotos ul {
+    grid-template-columns: 60% auto;
+    grid-auto-rows: 594px;
   }
 }
 @media (min-width: 1200px) {
-  .promophotos {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: ". content .";
+  .promophotos ul {
+    grid-template-areas: "g1 g2";
+    grid-auto-rows: 626px;
+  }
+}
+@media (min-width: 1200px) {
+  .promophotos ul li.img-1 {
+    grid-area: g1;
+  }
+}
+@media (min-width: 1200px) {
+  .promophotos ul li.img-2 {
+    grid-area: g2;
   }
 }
 
@@ -538,97 +693,71 @@ footer .content {
     What's New
 ============= */
 @media (min-width: 768px) {
-  .whatsnew ul {
+  .whatsnew .whatsnew-articles {
     display: grid;
-    grid-template-columns: 16px 1fr 1fr 1fr 16px;
-  }
-}
-@media (min-width: 992px) {
-  .whatsnew ul {
-    display: grid;
-    grid-template-columns: 16px 1fr 1fr 1fr 16px;
+    grid-template-columns: 16px auto 16px;
+    grid-template-columns: ". articles .";
   }
 }
 @media (min-width: 1200px) {
-  .whatsnew ul {
-    display: grid;
-    grid-template-columns: 16px 1fr 1fr 1fr 16px;
-  }
-}
-
-/* =============
-    Hero Buttons
-============= */
-.herobutton {
-  /* =============@include sm{
-              display: grid;
-              grid-template-columns: 1fr;
-              grid-template-areas: 
-              ". content .";
-          }
-          @include md{
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-areas: 
-              ". content .";
-          }
-          @include lg{
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-areas: 
-              ". content .";
-          }
-          @include xl{
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-template-areas: 
-              ". content .";
-          }
-      }============= */
-}
-@media (min-width: 768px) {
-  .herobutton {
-    display: grid;
-    grid-template-columns: 15px 1fr 1fr 15px;
-    grid-template-areas: ". box-1 box-2 .";
-  }
-}
-@media (min-width: 1200px) {
-  .herobutton {
-    grid-template-columns: auto 570px 570px auto;
+  .whatsnew .whatsnew-articles {
+    grid-template-columns: auto 1140px auto;
   }
 }
 @media (min-width: 1400px) {
-  .herobutton {
-    grid-template-columns: auto 660px 660px auto;
+  .whatsnew .whatsnew-articles {
+    grid-template-columns: auto 1320px auto;
+  }
+}
+.whatsnew .whatsnew-articles ul.article-grid {
+  column-gap: 16px;
+  row-gap: 16px;
+}
+.whatsnew .whatsnew-articles ul.article-grid li {
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .whatsnew .whatsnew-articles ul.article-grid {
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: articles;
+    grid-template-areas: "a1 a1 a2 a2" "a3 a3 a4 a4" ". a5 a5 .";
+  }
+}
+@media (min-width: 992px) {
+  .whatsnew .whatsnew-articles ul.article-grid {
+    grid-template-columns: repreat(6, 1fr);
+    grid-template-areas: "a1 a1 a2 a2 a3 a3" ". a4 a4 a5 a5 .";
   }
 }
 @media (min-width: 1200px) {
-  .herobutton .container {
-    grid-template-columns: 16px auto 16px;
+  .whatsnew .whatsnew-articles ul.article-grid li .container {
+    grid-template-columns: 15px auto;
   }
 }
 @media (min-width: 768px) {
-  .herobutton .container.box-1 {
-    grid-area: box-1;
+  .whatsnew .whatsnew-articles ul.article-grid li.article-1 {
+    grid-area: a1;
   }
 }
 @media (min-width: 768px) {
-  .herobutton .container.box-2 {
-    grid-area: box-2;
+  .whatsnew .whatsnew-articles ul.article-grid li.article-2 {
+    grid-area: a2;
   }
 }
-.herobutton .container .content {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "h2 img" "a img";
+@media (min-width: 768px) {
+  .whatsnew .whatsnew-articles ul.article-grid li.article-3 {
+    grid-area: a3;
+  }
 }
-.herobutton .container .content h2 {
-  grid-area: h2;
+@media (min-width: 768px) {
+  .whatsnew .whatsnew-articles ul.article-grid li.article-4 {
+    grid-area: a4;
+  }
 }
-.herobutton .container .content a {
-  grid-area: a;
-}
-.herobutton .container .content img {
-  grid-area: img;
+@media (min-width: 768px) {
+  .whatsnew .whatsnew-articles ul.article-grid li.article-5 {
+    grid-area: a5;
+  }
 }

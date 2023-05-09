@@ -3,27 +3,131 @@
 ============= */
 
 .hero{
+    
     .hero-content{
+        
         @include md{
+            
             display: grid;
             grid-template-columns: 40% 60%;
         }
 
         @include lg{
+            
             grid-template-columns: 50% 50%;
         }
     }    
     .hero-content-left.container{
+        padding: 12px;
+        background-color: rgb(239, 252, 196);
         @include lg{
-        grid-template-columns: auto auto 16px;
+        grid-template-columns: 16px auto auto;
         }
 
     } 
     .hero-content-right.container{
+        padding: 12px;
+        background-color: rgb(218, 237, 153);
         @include lg{
-        grid-template-columns: auto auto 16px; /*need to be fixed */
+        grid-template-columns: 240px auto 16px;
         }
 
     } 
 }
-   
+
+
+    /* =============
+        @include md{
+            display:grid;
+            grid-template-columns: 15px 1fr 1fr 15px;
+            grid-template-areas:
+            ". box-1 box-2 ."
+            ;
+        }
+    
+        @include xl{
+            grid-template-columns: auto 570px 570px auto;
+        }
+    
+        @include xxl{
+            grid-template-columns: auto 660px 660px auto;
+        }
+        .container{
+            @include xl{
+                grid-template-columns: 16px auto 16px;
+            }
+    
+            &.box-1{
+                @include md{
+                    grid-area: box-1;
+                }
+            }
+    
+            &.box-2{
+                @include md{
+                    grid-area: box-2;
+                }
+            }
+            .content{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas:
+                "h2 img"
+                "a img"
+                ;
+                h2{
+                    grid-area: h2;
+                }
+    
+                a{
+                    grid-area: a;
+                }
+    
+                img{
+                    grid-area: img;
+                }
+            }
+        }
+    
+
+
+
+
+
+
+
+
+
+    /* =============
+    Hero Buttons.herobutton{
+============= */
+
+
+
+
+
+    /* =============@include sm{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                ". content .";
+            }
+            @include md{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                ". content .";
+            }
+            @include lg{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                ". content .";
+            }
+            @include xl{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                ". content .";
+            }
+        }============= */

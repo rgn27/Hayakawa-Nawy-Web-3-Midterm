@@ -4,31 +4,44 @@
 
 .promophotos{
     
-    @include sm{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-areas: 
-        ". content .";   
-    }
-
-    @include md{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 
-        ". content .";   
-        }
-    @include lg{
-        display: grid;
-        grid-template-columns: 50% 50%
-        ;
-        grid-template-areas: 
-        ". content .";   
+    ul{
+        li  {list-style: none;
+        }  
+        @include md{
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 50% auto ;
+            grid-auto-rows: 420px;
         }
 
-    @include xl{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 
-        ". content .";   
-    }
+        @include lg{
+            grid-template-columns: 60% auto;
+            grid-auto-rows: 594px;
+        }
+
+        @include xl{
+            grid-template-areas:
+            "g1 g2"
+            ;
+            grid-auto-rows: 626px;
+        }
+
+        li{
+            &.img-1{
+                @include xl{
+                    grid-area: g1;
+                }
+            }
+
+            &.img-2{
+                @include xl{
+                    grid-area: g2;
+                }
+            }
+
+           
+        }
+    }    
 }
+
+
