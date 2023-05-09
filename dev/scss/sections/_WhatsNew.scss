@@ -12,6 +12,7 @@
 
         @include xl{
             grid-template-columns: auto 1140px auto;
+            
             }
 
         @include xxl{
@@ -19,7 +20,7 @@
             }
 
             ul.article-grid{
-                li  {list-style: none;
+                li {list-style: none;
                 }  
                 column-gap: 16px;
                 row-gap: 16px;
@@ -27,7 +28,6 @@
                     grid-area: articles;
                     display: grid;
                     grid-template-columns: repeat(4,1fr);
-                    grid-area: articles;
                     grid-template-areas:
                     "a1 a1 a2 a2"
                     "a3 a3 a4 a4"
@@ -36,6 +36,7 @@
 
                 @include lg{
                     grid-template-columns: repreat(6,1fr);
+                    display: grid;
                     grid-template-areas: 
                     "a1 a1 a2 a2 a3 a3"
                     ". a4 a4 a5 a5 ."; 

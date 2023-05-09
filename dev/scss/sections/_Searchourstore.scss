@@ -7,8 +7,9 @@
     
     
     .content{
-
+        
         @include sm{
+            
             display: grid;
             grid-template-columns: 16px 1fr 1fr 16px;
             grid-template-areas: 
@@ -17,6 +18,7 @@
        
         
         @include xl{ 
+            background-color: #D7D5CA;
             text-align: center;
             grid-template-columns: auto 1fr auto;
             grid-area: 

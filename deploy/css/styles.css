@@ -464,6 +464,7 @@ footer .newsletter {
 }
 @media (min-width: 1200px) {
   .searchourstore .content {
+    background-color: #D7D5CA;
     text-align: center;
     grid-template-columns: auto 1fr auto;
     grid-area: "p1 p1";
@@ -721,13 +722,13 @@ footer .newsletter {
     grid-area: articles;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-area: articles;
     grid-template-areas: "a1 a1 a2 a2" "a3 a3 a4 a4" ". a5 a5 .";
   }
 }
 @media (min-width: 992px) {
   .whatsnew .whatsnew-articles ul.article-grid {
     grid-template-columns: repreat(6, 1fr);
+    display: grid;
     grid-template-areas: "a1 a1 a2 a2 a3 a3" ". a4 a4 a5 a5 .";
   }
 }
