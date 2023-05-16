@@ -3,45 +3,69 @@
 ============= */
 
 .promophotos{
-    
+
     ul{
-        li  {list-style: none;
-        }  
+        list-style: none;
+        padding: 0;
+
         @include md{
-            padding: 20px;
+            
             display: grid;
-            grid-template-columns: 50% auto ;
-            grid-auto-rows: 420px;
+            grid-template-columns: 50% auto;
+            
         }
 
         @include lg{
+            display: grid;
             grid-template-columns: 60% auto;
-            grid-auto-rows: 594px;
+            padding: 15px 15px 15px;
+            
         }
 
         @include xl{
             grid-template-areas:
             "g1 g2"
-            ;
-            grid-auto-rows: 626px;
+            "g1 g3";
+            padding: 20px 15px 20px;
+            
         }
+    }
 
         li{
             &.img-1{
                 @include xl{
                     grid-area: g1;
+                    
                 }
+                
             }
+            
 
             &.img-2{
+                
                 @include xl{
                     grid-area: g2;
+                    
                 }
+                
             }
+            
+            &.img-3{
+                display: none;
 
-           
+                @include md{
+
+                }
+                @include lg{
+
+                }
+ 
+                @include xl{
+
+                    grid-area: g3;
+                    display: block;
+                }
+            }   
         }
-    }    
-}
-
+    }   
 

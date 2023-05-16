@@ -1,14 +1,6 @@
 /* =============
     Search our Store
-============= */
-.searchourstore{
-    font-style: #3E3E3E;
-    font-size: 27px;
-    
-    
-    .content{
-        
-        @include sm{
+    @include sm{
             
             display: grid;
             grid-template-columns: 16px 1fr 1fr 16px;
@@ -25,5 +17,61 @@
             "p1 p1";
 
         }
+============= */
+.search{
+    margin: 25px 0 25px 0;
+    
+    .content{
+        
+        form{
+            
+            display: flex;
+
+            input{
+                color: $gray;
+                font-size: 16px;
+                width: 100%;
+
+                border: none;
+                border-bottom: 2px  solid $graydark;
+                @include md{
+                    font-size: 30px;
+                }
+                @include lg{
+                    font-size: 35px;
+                }
+            }
+        ::placeholder{
+            color: $graylight;
+            opacity: 1;
+        }
+        
+        ::-ms-input-placeholder{
+            color: $graylight;
+        }
+
+        button{
+                background-color: $whitedark;
+                border: none;
+                border-radius: 5px;
+                margin-left: 10px;
+                padding: 8px 12px 8px 8px;
+
+                @include md{
+                    padding: 10px 15px 10px 15px
+                }
+
+                img{
+                    width: 25px;
+                    
+
+                    @include md{
+                        width: 30px;
+                    }
+                }
+            }
+    
+        }
+        
     }
 }

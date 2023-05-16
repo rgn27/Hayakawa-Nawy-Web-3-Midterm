@@ -5,42 +5,152 @@
 
 
 footer{
+    padding-top: 20px;
+    background-color: $greenlight;
+
     .content{
-        li  {list-style: none;
-        }  
+        
         @include md{
             display: grid;
             grid-template-columns: 50% auto;
             grid-template-areas:
             "locations newsletter"
             "locations social";
+            gap: 20px;
         }
         
-        }
+        
         @include lg{
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
-            "locations newsletter social" ;
+            "locations newsletter social";
 
         }
+
+        h4{
+            font-size: 20px;
+            color: $graydark;
+        }
+
+        .locations, .social{
+            ul{
+                list-style:none;
+                padding:0;
+
+                img{
+                    padding-right: 10px;
+                }
+
+                h5{
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+
+                p{
+                    font-size:12px;
+                    margin-bottom:15px;
+
+                    span{
+                        display:inline-block;
+                    }
+                }
+
+                a{
+                    color: $graydark;
+                }
+
+                .border-bottomborder-bottom{
+                    border-bottom:2px solid $graydark;
+                    margin:25px 0 25px 0;
+                }
+
+            }
+        }
+
         .locations{
+            padding: 20px;
             @include md{
                 grid-area:locations;
             }
+            ul{
+                li{
+                    color: $graydark;
+
+                }
+            }
         }
         .newsletter{
-            background-color: rgb(218, 237, 153);
+            padding: 20px;
+            background-color: $greenlight;
             @include md{
                 grid-area: newsletter;
             }
+
+            form{
+                display: flex;
+                flex-flow: wrap;
+                justify-content: end;
+
+                input{
+                    width: 100%;
+                    background-color: $white;
+                    color: $graydark;
+                    padding: 15px 10px 15px 10px;
+                    margin: 20px 0 20px 0;
+
+                }
+                ::placeholder{
+                    color: $graydark;
+                    opacity: 1;
+                }
+                ::-ms-input-placeholder{
+                    color: $graydark;
+                }
+                button{
+                    color:$graydark;
+                    background-color: $white;
+                    padding: 10px 20px 10px 20px;
+                    text-decoration: none;
+                    text-align: center;
+                    border: none;
+                }
+
+            }
         }
         .social{
+            padding: 20px;
             @include md{
                 grid-area: social;
             }
+
+            @include lg{
+                text-align: right;
+            }
+            ul li{
+                display: inline-block;
+
+                a{
+                    color: $white;
+                    i{
+                        font-size: 30px;
+                        padding-right: 15px;
+
+                    }
+
+                }
+                @include lg{
+                    &:last-of-type{
+                        a i{
+                            padding-right: 0;
+                        }
+                    }
+
+                }
+            }
+
         }
         
     }
 
-
+}
     

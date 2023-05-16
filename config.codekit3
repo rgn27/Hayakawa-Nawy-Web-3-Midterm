@@ -156,7 +156,7 @@
     },
     "\/deploy\/Images\/Promo1.png" : {
       "ft" : 32768,
-      "iS" : 1061133,
+      "iS" : 315625,
       "oA" : 0,
       "oAP" : "\/deploy\/Images\/Promo1.png",
       "oF" : 0,
@@ -176,6 +176,19 @@
       "oIPL" : 0,
       "opt" : 0,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/Images\/Promo3.jpeg" : {
+      "ft" : 16384,
+      "iS" : 154301,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/Images\/Promo3.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -225,6 +238,19 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/deploy\/Images\/WhoWeAre.png" : {
+      "ft" : 32768,
+      "iS" : 14688,
+      "oA" : 0,
+      "oAP" : "\/deploy\/Images\/WhoWeAre.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/deploy\/Images\/youtube.svg" : {
       "ft" : 2097152,

@@ -3,11 +3,34 @@
 ============= */
 
 .whatsnew{
+    margin: 0 0 20px 0;
+    @include md{
+        margin: 20px p 40px 0;
+    }
+    @include xl{
+        margin: 50px 0 60px 0;
+    }
+    .whats-new-title{
+        h2{
+            font-size: 20px;
+            color: $whitedark;
+            padding: 10px 0 10px 0;
+
+            @include lg{
+                font-size: 32px;
+            }
+            @include xl{
+                font-size: 40px;
+            }
+        }
+    }
+
     .whatsnew-articles{
         @include md{
             display: grid;
             grid-template-columns: 16px auto 16px;
-            grid-template-columns: ". articles .";
+            grid-template-areas: 
+            ". articles .";
             }
 
         @include xl{
@@ -18,12 +41,15 @@
         @include xxl{
             grid-template-columns: auto 1320px auto;
             }
+        
+        ul.article-grid{
+                list-style: none;
+                padding-left: 0;
+                text-decoration: none;
+                display: grid;
+                grid-template-columns: 100%;
+                gap:16px;
 
-            ul.article-grid{
-                li {list-style: none;
-                }  
-                column-gap: 16px;
-                row-gap: 16px;
                 @include md{
                     grid-area: articles;
                     display: grid;
@@ -35,7 +61,7 @@
                 }
 
                 @include lg{
-                    grid-template-columns: repreat(6,1fr);
+                    grid-template-columns: repeat(6,1fr);
                     display: grid;
                     grid-template-areas: 
                     "a1 a1 a2 a2 a3 a3"
@@ -45,10 +71,40 @@
 
                 li{
                     .container{
+                        
+                        padding: 15px 0 35px 0;
+
                         @include xl{
-                            grid-template-columns: 15px auto;
+                            grid-template-columns: 15px auto 15px;
                         }
+                        h3{
+                            font-size: 28px;
+                            margin-bottom:10px;
+
+                        }
+
+                        p{
+                            padding-bottom: 25px;
+                        }
+
+                        a{
+                            color: $offwhite;
+                            background-color: $graydark;
+                            padding: 10px 20px 10px 20px;
+                            text-decoration: none;
+                            text-align: center;
+                            transition: 0.5s;
+
+                            
+                        }
+                        a:hover{
+                            background-color: $greendark;
+                            text-decoration: underline;
+                            transition: 0.5s;
+                        }
+                        
                     }
+
                     &.article-1{
                         @include md{
                             grid-area: a1;

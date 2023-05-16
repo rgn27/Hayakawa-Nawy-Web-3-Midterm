@@ -3,18 +3,61 @@
 ============= */
 
 header{
+    background-color: $whitedark;  
     
-    padding-top: 25px ;
-    padding-bottom: 12px;
-    .content{
+    .container{
+        grid-template-columns: 5fr;
+        .content{
+            
+            div{
+            margin: 20px 0 20px 0px;
+
+            @include md{
+                margin: 25px 0 25px 0px;
+            }
+            img{
+            width: 40px;
+            padding-right: 1rem;
+
+            @include lg{
+                width: 60px;
+                padding-right: 1rem;
+            }
+        }
+        h1{
+            display: none;
+            color: $greenlight;
+            @include md{
+                display: inline-block;
+                font-size: 24px;
+            }
+
+            @include lg{
+                font-size: 36px;
+            }
+
+            span{
+                font-size: 12px;
+
+                @include md{
+                    display: block;
+                    
+                }
+
+                @include lg{
+                    font-size: 16px;
+                }
+            }
+        }
+        }     
         
-        display: grid;
         
-        grid-template-columns: 1fr 1fr;
-        padding: 16px 0px;
+        }
         
     }
-    .logo{
+}
+
+   /* ============= .logo{
         text-align:left;
     }
 
@@ -29,4 +72,4 @@ header{
             display: block;
         }
     }
-}
+============= */
